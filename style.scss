@@ -1,4 +1,9 @@
-$font_family: 'Lato';
+$font_1: 'Lato-Regular';
+$font_2: 'Lato-SemiBold';
+$font_3: 'Inter-Regular';
+$font_4: 'Lato-Bold';
+$color_1: #231815;
+$color_2: #E45302;
 
 * {
     margin: 0;
@@ -6,8 +11,53 @@ $font_family: 'Lato';
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('./../fonts/Lato-Regular/Lato-Regular.woff2') format('woff2'),
+        url('./../fonts/Lato-Regular/Lato-Regular.woff') format('woff'),
+        url('./../fonts/Lato-Regular/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato-SemiBold';
+    src: url('./../fonts/Lato-Semibold/Lato-Semibold.woff2') format('woff2'),
+        url('./../fonts/Lato-Semibold/Lato-Semibold.woff') format('woff'),
+        url('./../fonts/Lato-Semibold/Lato-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Korataki-Regular';
+    src: url('./../fonts/Korataki-Regular/KoratakiRg-Regular.woff2') format('woff2'),
+        url('./../fonts/Korataki-Regular/KoratakiRg-Regular.woff') format('woff'),
+        url('./../fonts/Korataki-Regular/KoratakiRg-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('./../fonts/Inter-Regular/Inter-Regular.woff2') format('woff2'),
+        url('./../fonts/Inter-Regular/Inter-Regular.woff') format('woff'),
+        url('./../fonts/Inter-Regular/Inter-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('./../fonts/Lato-Bold/Lato-Bold.woff2') format('woff2'),
+        url('./../fonts/Lato-Bold/Lato-Bold.woff') format('woff'),
+        url('./../fonts/Lato-Bold/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
-    font-family: $font_family;
+    font-family: $font_1;
     font-style: normal;
 }
 
@@ -29,7 +79,7 @@ ul {
 }
 
 .bar_info {
-    background: #231815;
+    background: $color_1;
     display: flex;
     justify-content: flex-end;
     
@@ -42,7 +92,7 @@ ul {
     }
 
     &__li-link {
-        font-weight: 400;
+        font-family: $font_1;
         font-size: 16px;
         line-height: 100%;
         color: #FFFFFF;
@@ -73,10 +123,10 @@ ul {
 
     &__link {
         text-transform: uppercase;
-        font-weight: 600;
+        font-family: $font_2;
         font-size: 16px;
         line-height: 100%;
-        color: #231815;
+        color: $color_1;
     }
 }
 
@@ -128,7 +178,7 @@ ul {
             border-radius: 100px;
             background-color: #fff;
             text-align: center;
-            font-family: 'Inter';
+            font-family: $font_3;
             font-style: normal;
             font-weight: 400;
             font-size: 12px;
@@ -138,10 +188,63 @@ ul {
     }
 
     &__text {
-        font-weight: 400;
+        font-family: $font_1;
         font-size: 16px;
         line-height: 100%;
         color: #FFFFFF;
     }
 }
 
+.content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.heading {
+    font-family: 'Korataki-Regular';
+    font-size: 44px;
+    line-height: 140%;
+    color: $color_1;
+}
+
+.products {
+    padding-top: 40px;
+
+    &__container {
+        max-width: 320px;
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    &__button {
+        padding: 13px 87px;
+        background-color: $color_2;
+        border-radius: 100px;
+        font-family: $font_2;
+        font-size: 16px;
+        line-height: 140%;
+        color: #FFFFFF;
+        position: absolute;
+        left: 31px;
+        bottom: 20px;
+    }
+
+    &__heading {
+        font-family: $font_4;
+        padding: 20px 0px 12px;
+        font-size: 18px;
+        line-height: 140%;
+        color: $color_1;
+    }
+
+    &__price {
+        font-family: $font_4;
+        font-size: 22px;
+        line-height: 140%;
+        color: $color_1;
+    }
+}
