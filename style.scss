@@ -2,10 +2,13 @@ $font_1: 'Lato-Regular';
 $font_2: 'Lato-SemiBold';
 $font_3: 'Inter-Regular';
 $font_4: 'Lato-Bold';
+$font_5: 'Roboto-Regular';
 $color_1: #231815;
 $color_2: #E45302;
 $color_3: #fff;
 $color_4: #808080;
+$color_5: #F5F5F5;
+$color_footer: #0C0C0C;
 
 * {
     margin: 0;
@@ -58,9 +61,21 @@ $color_4: #808080;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('./../fonts/Roboto-Regular/Roboto-Regular.woff2') format('woff2'),
+        url('./../fonts/Roboto-Regular/Roboto-Regular.woff') format('woff'),
+        url('./../fonts/Roboto-Regular/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
 body {
     font-family: $font_1;
     font-style: normal;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 a, input {
@@ -151,7 +166,7 @@ ul {
 
 .search {
     background: $color_3;
-    border: 1px solid #F5F5F5;
+    border: 1px solid $color_5;
     border-radius: 88.6364px;
     padding: 9px 14px 9px 21px;
     display: flex;
@@ -294,3 +309,103 @@ ul {
         }
     }
 }
+
+.footer {
+    background: $color_footer;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+
+    &__first-part {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 53px;
+    }
+
+    &__text {
+        max-width: 320px;
+        font-family: $font_5;
+        font-size: 16px;
+        line-height: 130%;
+        color: $color_4;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // gap: 38px;
+
+        &-paragraph {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        &-text {
+            font-family: $font_1;
+            font-size: 16px;
+            line-height: 150%;
+            color: $color_5;
+        }
+    }
+
+    &__heading {
+        font-family: $font_4;
+        font-size: 18px;
+        line-height: 100%;
+        color: $color_3;
+        max-width: 246px;
+        padding-bottom: 20px;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__nav {
+        &-list{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        &-link {
+            font-family: $font_1;
+            font-size: 16px;
+            line-height: 100%;
+            color: $color_5;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 62px;
+    }
+
+    &__documents {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 20px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 33px;
+    }
+}
+
+
+
+

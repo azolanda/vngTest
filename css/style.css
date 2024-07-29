@@ -35,9 +35,18 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("./../fonts/Roboto-Regular/Roboto-Regular.woff2") format("woff2"), url("./../fonts/Roboto-Regular/Roboto-Regular.woff") format("woff"), url("./../fonts/Roboto-Regular/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 body {
   font-family: "Lato-Regular";
   font-style: normal;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 a, input {
@@ -247,4 +256,85 @@ ul {
 }
 .products__price-through {
   text-decoration: line-through;
+}
+
+.footer {
+  background: #0C0C0C;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__first-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 53px;
+}
+.footer__text {
+  max-width: 320px;
+  font-family: "Roboto-Regular";
+  font-size: 16px;
+  line-height: 130%;
+  color: #808080;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__contacts-paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+}
+.footer__contacts-text {
+  font-family: "Lato-Regular";
+  font-size: 16px;
+  line-height: 150%;
+  color: #F5F5F5;
+}
+.footer__heading {
+  font-family: "Lato-Bold";
+  font-size: 18px;
+  line-height: 100%;
+  color: #fff;
+  max-width: 246px;
+  padding-bottom: 20px;
+}
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.footer__nav-link {
+  font-family: "Lato-Regular";
+  font-size: 16px;
+  line-height: 100%;
+  color: #F5F5F5;
+}
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+}
+.footer__documents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+.footer__cards {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 33px;
 }/*# sourceMappingURL=style.css.map */
