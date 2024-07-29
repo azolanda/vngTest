@@ -81,17 +81,17 @@ if (data) {
 
                 priceWrapper.insertAdjacentHTML('beforeend',
                     `<p class = "products__price products__price-best" >
-                    ${i.price} &#x20bd; 
+                    ${i.price.toLocaleString('ru')} &#x20bd; 
                 </p>  
                 <p class = "products__price products__price-old" >
                     <span class = "products__price-through">
-                        ${i.priceOld} </span> &#x20bd;  
+                        ${i.priceOld.toLocaleString('ru')}</span> &#x20bd;  
                 </p>
             `);
             } else {
                 priceWrapper.insertAdjacentHTML('beforeend',
                     `<p class="products__price">
-                ${i.price} &#x20bd;
+                ${i.price.toLocaleString('ru')} &#x20bd;
             </p>
             `);
             }
