@@ -4,6 +4,8 @@ $font_3: 'Inter-Regular';
 $font_4: 'Lato-Bold';
 $color_1: #231815;
 $color_2: #E45302;
+$color_3: #fff;
+$color_4: #808080;
 
 * {
     margin: 0;
@@ -65,6 +67,16 @@ a, input {
     all: unset;
 }
 
+a {
+    transition: all 0.3s;
+}
+
+a:hover {
+    cursor: pointer;
+    text-underline-offset: 5px;
+    text-decoration: underline;
+}
+
 ul {
     list-style-type: none;
 }
@@ -95,7 +107,7 @@ ul {
         font-family: $font_1;
         font-size: 16px;
         line-height: 100%;
-        color: #FFFFFF;
+        color: $color_3;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 }
@@ -138,18 +150,18 @@ ul {
 }
 
 .search {
-    background: #FFFFFF;
-        border: 1px solid #F5F5F5;
-        border-radius: 88.6364px;
-        padding: 9px 14px 9px 21px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    background: $color_3;
+    border: 1px solid #F5F5F5;
+    border-radius: 88.6364px;
+    padding: 9px 14px 9px 21px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        &__icon {
-            display: flex;
-            align-items: center;
-        }
+    &__icon {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .shopping_cart {
@@ -160,6 +172,10 @@ ul {
     background: #000000;
     border-radius: 100px;
     padding: 3.5px 19px;
+    font-family: $font_1;
+    font-size: 16px;
+    line-height: 100%;
+    color: $color_3;
     
 
     &__icon {
@@ -176,7 +192,7 @@ ul {
             width: 18px;
             height: 18px;
             border-radius: 100px;
-            background-color: #fff;
+            background-color: $color_3;
             text-align: center;
             font-family: $font_3;
             font-style: normal;
@@ -185,13 +201,6 @@ ul {
             line-height: 140%;
             color: #1A1A1A;
         }
-    }
-
-    &__text {
-        font-family: $font_1;
-        font-size: 16px;
-        line-height: 100%;
-        color: #FFFFFF;
     }
 }
 
@@ -209,10 +218,30 @@ ul {
 
 .products {
     padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 22.86%);
+    grid-column-gap: 40px;
+    grid-row-gap: 50px;
 
     &__container {
         max-width: 320px;
-        position: relative;
+        position: relative;        
+    }
+
+    &__discount {
+        &::before {
+            content: 'Акция';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 8px 40px;
+            background-color: $color_1;
+            border-radius: 100px;
+            color: $color_3;
+            font-family: $font_2;
+            font-size: 16px;
+            line-height: 140%;
+        }
     }
 
     &__img {
@@ -227,7 +256,7 @@ ul {
         font-family: $font_2;
         font-size: 16px;
         line-height: 140%;
-        color: #FFFFFF;
+        color: $color_3;
         position: absolute;
         left: 31px;
         bottom: 20px;
@@ -246,5 +275,22 @@ ul {
         font-size: 22px;
         line-height: 140%;
         color: $color_1;
+
+        &-wrapper {
+            display: flex;
+            gap: 16px;
+        }
+
+        &-best {
+            color: $color_2;
+        }
+
+        &-old {
+            color: $color_4;
+        }
+
+        &-through {
+            text-decoration: line-through;
+        }
     }
 }
