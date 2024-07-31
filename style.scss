@@ -78,7 +78,7 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 
-a, button, input{
+a, button, input, .mobile__menu-icon{
     all: unset;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
