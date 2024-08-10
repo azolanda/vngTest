@@ -523,8 +523,8 @@ ul {
 }
 @media (max-width: 699px) {
   .container {
-    padding-left: calc(50% - 160px);
-    padding-right: calc(50% - 160px);
+    padding-left: 35px;
+    padding-right: 35px;
   }
   .header__main {
     padding-top: 10px;
